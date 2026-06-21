@@ -294,8 +294,39 @@
     background: rgba(0, 0, 0, 0.3);
     z-index: 1;
 }
+
+/* Force la bannière à prendre toute la hauteur du carousel voisin */
+.carousel-header-banner {
+    position: relative;
+    height: 100%; /* S'assure que la div remplit le parent */
+    min-height: 400px; /* Donne une hauteur minimale pour éviter le gris */
+    overflow: hidden;
+    background-color: #f8f9fa; /* Une couleur plus neutre si l'image manque */
+}
+
+/* S'assure que l'image à l'intérieur remplit bien le tout */
+.carousel-header-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recadre l'image proprement */
+}
 /*** Carousel Header End ***/
 
+.footer-link {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: 0.3s;
+    display: block;
+    margin-bottom: 8px;
+}
+.footer-link:hover {
+    color: #f38b00; /* Votre orange */
+    padding-left: 5px;
+}
+.contact-item i {
+    color: #f38b00;
+    margin-right: 10px;
+}
 
 /*** Page Header start ***/
 .page-header {
@@ -307,6 +338,7 @@
     background-attachment: fixed;
 }
 /*** Page Header end ***/
+
 
 
 /*** Products Start ***/

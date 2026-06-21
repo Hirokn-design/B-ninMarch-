@@ -1,14 +1,13 @@
 <?php
+// Vérification de session pour le panier et favoris
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-// Calcul rapide des totaux pour les badges
 $nb_panier = isset($_SESSION['panier']) ? array_sum(array_column($_SESSION['panier'], 'quantite')) : 0;
 $nb_favoris = isset($_SESSION['favoris']) ? count($_SESSION['favoris']) : 0;
 ?>
 
 <style>
-    /* --- Styles sur-mesure pour la Navbar --- */
     .navbar-bm .nav-link {
         font-weight: 500;
         color: #495057;
@@ -18,7 +17,6 @@ $nb_favoris = isset($_SESSION['favoris']) ? count($_SESSION['favoris']) : 0;
     .navbar-bm .nav-link:hover,
     .navbar-bm .nav-link.active {
         color: #f38b00 !important;
-        /* Orange BéninMarché */
     }
 
     .btn-outline-account {
@@ -32,7 +30,6 @@ $nb_favoris = isset($_SESSION['favoris']) ? count($_SESSION['favoris']) : 0;
         color: #f38b00;
         border-color: #f38b00;
         background-color: #fffaf0;
-        /* Fond très légèrement orangé */
     }
 
     .custom-dropdown {
@@ -53,7 +50,6 @@ $nb_favoris = isset($_SESSION['favoris']) ? count($_SESSION['favoris']) : 0;
         color: #f38b00;
     }
 
-    /* Effet de rebond discret au survol du logo */
     .brand-logo-hover {
         transition: transform 0.3s ease;
     }
@@ -63,7 +59,7 @@ $nb_favoris = isset($_SESSION['favoris']) ? count($_SESSION['favoris']) : 0;
     }
 </style>
 
-<div class="container-fluid px-5 py-2 shadow-sm bg-white sticky-top" style="z-index: 1000;">
+<div class="container-fluid px-5 py-2 shadow-sm bg-white sticky-top wow fadeInDown" data-wow-delay="0.1s" style="z-index: 1000;">
     <nav class="navbar navbar-expand-lg navbar-light p-0 navbar-bm">
 
         <a href="index.php" class="navbar-brand d-flex align-items-center text-decoration-none">
