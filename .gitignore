@@ -21,6 +21,8 @@ nbproject/
 # Dossiers de build/distribution si présents
 /dist/
 
+/BeninMarche Tree.md
+
 # --- CACHE & UPLOADS ---
 # On évite de versionner les images uploadées par les utilisateurs
 /img/uploads/
