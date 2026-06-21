@@ -1,0 +1,29 @@
+# --- SÉCURITÉ : Fichiers sensibles ---
+# On exclut le fichier de configuration qui contient les mots de passe BDD
+/AdminLTE-master/config/db.php
+
+# --- DÉPENDANCES ET BIBLIOTHÈQUES ---
+# On exclut AdminLTE complet (trop lourd, on garde juste tes fichiers personnalisés)
+/AdminLTE-master/
+# Si tu utilises des paquets Composer ou NPM
+/vendor/
+/node_modules/
+
+# --- FICHIERS SYSTÈME & TEMP ---
+# Fichiers macOS
+.DS_Store
+# Fichiers de configuration de ton éditeur (VS Code, etc.)
+.vscode/
+.idea/
+nbproject/
+# Fichiers de logs
+*.log
+# Dossiers de build/distribution si présents
+/dist/
+
+# --- CACHE & UPLOADS ---
+# On évite de versionner les images uploadées par les utilisateurs
+/img/uploads/
+# Fichiers de cache PHP ou autres
+/cache/
+*.tmp
